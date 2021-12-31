@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <h1>TÍNH TIỀN CÁP</h1>
+    <select name="" id="khachhang">
+        <option value="">--Chọn--</option>
+        <option value="nhadan">Nhà Dân</option>
+        <option value="doanhnghiep">Doanh Nghiệp</option>
+    </select>
+    <input id="kenh" type="" placeholder="Số Kênh Cao Cấp">
+    <input class="connect" id="ketnoi" type="" placeholder="Số Kết Nối">
+    <button onclick="tinhtien()">Tính Tiền</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+        $(document).change(function () {
+            var khachEl = $('#khachhang').find(":selected").val();
+            if(khachEl=="doanhnghiep"){
+                $(".connect").addClass("isShow");
+            }else{
+                $(".connect").removeClass("isShow");
+
+            }
+        })
+
+    </script>
+
+        <script src="./index.js"></script>
+</body>
+
+</html>
